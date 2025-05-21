@@ -23,14 +23,15 @@ audio::-webkit-media-controls-enclosure {
     position: absolute;
     width: 100%;
     padding-top: 22px;
-    font-family: 微软雅黑
+    font-family: 微软雅黑;
+    font-weight: bold;
 }
 
 #main .top .bg1 {
     height: 70px;
-    background-image: url(../img/bjm11.png);
+    background-image: url(../img/bjm22.png);
     background-repeat: no-repeat, repeat;
-    background-size: 100% 100%
+    background-size: 100% 300%
 }
 
 #main .top .bg2 {
@@ -67,7 +68,8 @@ audio::-webkit-media-controls-enclosure {
 #main .ctrl .gongneng {
     font-family: 微软雅黑;
     width: 100%;
-    margin-bottom: 15px
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 #main .ctrl .gongneng span {
@@ -81,6 +83,22 @@ audio::-webkit-media-controls-enclosure {
     justify-content: space-between
 }
 
+/* 定义波浪动效动画 */
+@keyframes ripple {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 #main .ctrl .gongneng .s .s1,
 #main .ctrl .gongneng .s .s2 {
     width: 50px;
@@ -89,8 +107,24 @@ audio::-webkit-media-controls-enclosure {
     border-radius: 10px;
     background-color: rgb(33, 235, 110);
     text-align: center;
-    font-size: 13px
+    font-size: 13px;
+    cursor: pointer;
 }
+/* 鼠标悬停时的背景色变化 */
+#main .ctrl .gongneng .s .s1:hover {
+    background-color: rgb(20, 180, 80); /* 深一点的颜色 */
+}
+#main .ctrl .gongneng .s .s2:hover {
+    background-color: rgb(20, 180, 80); /* 深一点的颜色 */
+}
+/* 点击时的波浪动效 */
+#main .ctrl .gongneng .s .s1:active {
+    animation: ripple 0.4s ease;
+}
+#main .ctrl .gongneng .s .s2:active {
+    animation: ripple 0.4s ease;
+}
+
 
 #main .ctrl ul.jj {
     list-style: none;
@@ -111,6 +145,12 @@ audio::-webkit-media-controls-enclosure {
     padding: 0;
     border-radius: 10px;
     cursor: pointer;
+}
+#main .ctrl ul.jj li:hover {
+    background-color: rgb(20, 180, 80); /* 深一点的颜色 */
+}
+#main .ctrl ul.jj li:active {
+    animation: ripple 0.4s ease;
 }
 
 #main .ctrl ul.jj li.sange {
@@ -134,5 +174,21 @@ audio::-webkit-media-controls-enclosure {
 
 #main .ctrl .help ul li {
     margin: 15px 0
+}
+
+#main .ctrl .beian {
+    border-radius: 15px;
+    background-color: #eee;
+    margin-top: 20px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main .ctrl .beian .title {
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+    margin-left: 5px;
 }
 /*百度酷库博客*/
