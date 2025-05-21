@@ -29,14 +29,14 @@ audio::-webkit-media-controls-enclosure {
 
 #main .top .bg1 {
     height: 70px;
-    background-image: url(../img/bjm22.png);
+    background-image: url(../img/bjm.png);
     background-repeat: no-repeat, repeat;
     background-size: 100% 300%
 }
 
 #main .top .bg2 {
     height: 80px;
-    background-image: url(../img/bjm22.png);
+    background-image: url(../img/bjm.png);
     background-repeat: no-repeat, repeat;
     background-size: 100% 100%
 }
